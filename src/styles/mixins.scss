@@ -1,0 +1,39 @@
+// Add this drop shadow to different containers to give your page a more 3D-feel!
+@mixin drop-shadow($color: #0005) {
+  box-shadow: 0 4px 4px $color;
+  -moz-box-shadow: 0 4px 4px $color;
+}
+
+// The power of mixins! All your buttons should be consistent with this.
+@mixin button(
+  $bgcolor: $blue,
+  $font-color: $white,
+  $font-size: 1.6rem,
+  $padding: 0.75rem 5rem,
+  $border-width: 0,
+  $border-color: #000000
+) {
+  padding: $padding;
+  text-decoration: none;
+  text-align: center;
+  border: $border-width solid $border-color;
+  border-radius: 4px;
+
+  color: $font-color;
+  background-color: $bgcolor;
+  font-family: $display-font;
+  font-size: $font-size;
+  @include drop-shadow;
+
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: darken($bgcolor, 5%);
+    transition: all 0.2s ease-in-out;
+  }
+  &:disabled,
+  &.disabled {
+    background-color: #c4c4c4;
+    cursor: not-allowed;
+  }
+}

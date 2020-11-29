@@ -1,0 +1,39 @@
+// Set box-sizing globally
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+// Ensure the app containers fills the screen
+html,
+body,
+#root {
+  min-height: 100vh;
+}
+
+// Set the font-size so 1rem = 10px for easier styling
+html {
+  font-size: 62.5%;
+}
+
+// Font Variables
+$text-font: 'Oswald', sans-serif;
+$display-font: 'Bangers', sans-serif;
+
+// Media Query Sizes
+$tablet: 650px;
+$large: 800px;
+
+// Colors
+$lt-blue: #85c7f2;
+$mid-blue: #3884ff;
+$bright-blue: #2462d9;
+$dark-blue: #40537f;
+$jade: #00b67d;
+$seafoam: #34c9ad;
+$gold: #f7bc50;
+$orange: #f66700;
+$red: #f64141;
+$white: #ffffff;
+$charcoal: #343434;
